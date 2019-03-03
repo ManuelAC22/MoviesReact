@@ -1,28 +1,38 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet ,Image} from 'react-native';
 
 
 function Suggestion(props) {
-    <View style={styles.container}>
-        <View>
-            <View style={styles.genero}>
-                <Text style={styles.generoTexto}>
-                    {props.genres[0]}
+    return (
+        <View style={styles.container}>
+            <View>
+                <View>
+                    <Image 
+                    style={styles.cover} 
+                    source={{
+                        uri:props.medium_cover_image
+                    }} 
+                    />
+                </View>
+                <View style={styles.genero}>
+                    <Text style={styles.generoTexto}>
+                        {props.genres[0]}
+                    </Text>
+                </View>
+            </View>
+            <View style={styles.right}>
+                <Text style={styles.title}>
+                    {props.title}
+                </Text>
+                <Text style={styles.years}>
+                    {props.year}
+                </Text>
+                <Text style={styles.ratting}>
+                    {props.rating}
                 </Text>
             </View>
         </View>
-        <View style={styles.right}>
-            <Text style={style.title}>
-                {props.title}
-            </Text>
-            <Text style={style.years}>
-                {props.years}
-            </Text>
-            <Text style={style.ratting}>
-                {props.rating}
-            </Text>
-        </View>
-    </View>
+    )
 }
 
 const styles = StyleSheet.create({
@@ -36,6 +46,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'black',
         paddingVertical: 5,
         paddingHorizontal: 7,
+        marginLeft:5,
     },
     generoTexto: {
         color: 'white',
@@ -63,7 +74,10 @@ const styles = StyleSheet.create({
     cover: {
         width: 150,
         height: 100,
-        resizeMode: 'contain'
+        resizeMode: 'cover',
+        borderRadius:10,
+        marginLeft:5,
+        marginBottom:5,
     },
     right: {
         paddingLeft: 10,

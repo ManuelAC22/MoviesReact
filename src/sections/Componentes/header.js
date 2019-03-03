@@ -21,6 +21,8 @@ const style = StyleSheet.create({
         width:300,
         height: 60,
         resizeMode: 'contain',
+        marginRight:'auto',
+        marginLeft:'auto'
     },
     container:{
         backgroundColor: '#ff801c',

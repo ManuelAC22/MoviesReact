@@ -5,10 +5,9 @@ function VerticalSeparator(props){
     return(
         <View style={[styles.separator,
                         {
-                            borderTopColor:(props.color)?props.color:'#eaeaea'
+                            borderTopColor:(props.color)?props.color:'#000000'
                         }
                     ]}>
-            <Text>Esto es un separador</Text>
         </View>
     )
 }
